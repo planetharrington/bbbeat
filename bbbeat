@@ -1,0 +1,4 @@
+#!/bin/sh
+CLASSPATH=build
+
+$JAVA_HOME/bin/java -cp $CLASSPATH com.blackball.bbtone.BBBeat

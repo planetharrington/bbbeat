@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="bbbeat:jar">
+    <output-path>$PROJECT_DIR$/classes/artifacts/bbbeat_jar</output-path>
+    <root id="archive" name="bbbeat.jar">
+      <element id="module-output" name="bbbeat" />
+      <element id="library" level="module" name="org.eclipse.jface_3.1.0.jar" module-name="bbbeat" />
+    </root>
+  </artifact>
+</component>

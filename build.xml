@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!-- ====================================================================== 
+     Oct 1, 2004 3:09:05 PM                                                        
+
+     BBBeat    
+     Beat generator
+                   
+     ====================================================================== -->
+<project name="BBBeat" default="jar">
+    <description>
+            Beat generator
+    </description>
+
+    <!-- ================================= 
+          target: compile
+         ================================= -->
+    <target name="compile" description="Compile the sources">
+        <mkdir dir="build" />
+        <javac srcdir="bin"
+               destdir="build"
+               classpath="../temp/build"
+               debug="on" />
+	<copy todir="build">
+	    <fileset dir="bin">
+	      <exclude name="**/*.java"/>
+	      <exclude name="**/CVS"/>
+	      <exclude name="**/CVS/*"/>
+	    </fileset>
+	</copy>
+    </target>
+
+    <!-- ================================= 
+          target: clean
+         ================================= -->
+    <target name="clean">
+        <delete file="bbbeat.jar"/>
+	<delete dir="build"/>
+    </target>
+
+    <!-- ================================= 
+          target: jar
+         ================================= -->
+    <target name="jar" depends="compile">
+        <jar destfile="bbbeat.jar">
+            <fileset dir="build">
+                <include name="**/*.class" />
+                <include name="**/*.properties" />
+            </fileset>
+            <manifest>
+                <attribute name="Main-Class"
+                           value="com.shaunharrington.bbbeat.BBBeat" />
+            </manifest>
+        </jar>
+    </target>
+
+</project>
+
