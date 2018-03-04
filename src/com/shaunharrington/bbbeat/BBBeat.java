@@ -68,7 +68,7 @@ public class BBBeat extends JFrame implements WindowListener {
 	NumberEditor textField1 = new NumberEditor(jSpinner);
 
 	public BBBeat() throws Exception {
-		super("BBBeat by BlackBall, Inc.");
+		super("BBBeat by Shaun Harrington");
 		initComponents();
 	}
 
